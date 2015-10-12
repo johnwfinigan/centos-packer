@@ -9,8 +9,7 @@
       "scripts": [
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
-        "scripts/cleanup.sh",
-        "scripts/zerodisk.sh"
+        "scripts/cleanup.sh"
       ]
     }
   ],
@@ -46,7 +45,7 @@
       ]
     },
     {
-      "type": "vmware-iso",
+      "type": "qemu",
       "iso_url": "http://mirrors.kernel.org/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
       "iso_checksum": "9d3fec5897be6b3fed4d3dda80b8fa7bb62c616bbfd4bdcd27295ca9b764f498",
       "iso_checksum_type": "sha256",
@@ -54,19 +53,16 @@
       "ssh_password": "vagrant",
       "ssh_wait_timeout": "10m",
       "disk_size": "100000",
-      "tools_upload_flavor": "linux",
-      "guest_os_type": "centos-64",
       "headless": "true",
       "shutdown_command": "sudo /sbin/halt -p",
       "http_directory": "http",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
-      "vmx_data": {
-        "memsize": "512",
-        "numvcpus": "1",
-        "vhv.enable": "TRUE"
-      }
+      "format": "qcow2",
+      "accelerator": "kvm",
+      "net_device": "virtio-net",
+      "disk_interface": "virtio" 
     }
   ]
 }
