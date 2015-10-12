@@ -45,7 +45,7 @@
       ]
     },
     {
-      "type": "vmware-iso",
+      "type": "qemu",
       "iso_url": "http://mirrors.kernel.org/centos/7/isos/x86_64/CentOS-7-x86_64-NetInstall-1503.iso",
       "iso_checksum": "498bb78789ddc7973fe14358822eb1b48521bbaca91c17bd132c7f8c903d79b3",
       "iso_checksum_type": "sha256",
@@ -53,19 +53,16 @@
       "ssh_password": "vagrant",
       "ssh_wait_timeout": "10m",
       "disk_size": "100000",
-      "tools_upload_flavor": "linux",
-      "guest_os_type": "centos-64",
       "headless": "true",
       "shutdown_command": "sudo /sbin/halt -p",
       "http_directory": "http",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
-      "vmx_data": {
-        "memsize": "512",
-        "numvcpus": "1",
-        "vhv.enable": "TRUE"
-      }
+      "format": "qcow2",
+      "accelerator": "kvm",
+      "net_device": "virtio-net",
+      "disk_interface": "virtio" 
     }
   ]
 }
