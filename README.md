@@ -3,7 +3,7 @@ centos-packer
 
 Fork of INSANEWORKS/centos-packer modified to build Centos Vagrant boxes for KVM / libvirt provider
 
-## Packer Build for VirtualBox
+## Packer Build for VirtualBox or qemu libvirt
 
 ```
 cd centos6 or centos7
