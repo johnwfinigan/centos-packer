@@ -12,5 +12,5 @@ rm -rf /tmp/*
 yum -y upgrade
 yum -y groupinstall "Development Tools"
 rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
-yum -y install python-devel gmp-devel man puppet
+yum -y install puppet
 yum -y clean all
