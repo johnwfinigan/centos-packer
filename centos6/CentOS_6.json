@@ -22,8 +22,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://mirrors.kernel.org/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
-      "iso_checksum": "9d3fec5897be6b3fed4d3dda80b8fa7bb62c616bbfd4bdcd27295ca9b764f498",
+      "iso_url": "https://mirrors.kernel.org/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
+      "iso_checksum": "ec49c297d484b9da0787e5944edc38f7c70f21c0f6a60178d8e9a8926d1949f4",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
@@ -34,7 +34,7 @@
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions.iso",
-      "guest_additions_sha256": "de4abc28832d4e96b826efef3e7e69e69d6b941babfdc6317185f1fd6e22ffcf",
+      "guest_additions_sha256": "6fbb59fd22e5f1b287a8a2b623604f0849b702a4ac737b57833f7cec006f01e6",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
@@ -46,8 +46,8 @@
     },
     {
       "type": "qemu",
-      "iso_url": "http://mirrors.kernel.org/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
-      "iso_checksum": "9d3fec5897be6b3fed4d3dda80b8fa7bb62c616bbfd4bdcd27295ca9b764f498",
+      "iso_url": "https://mirrors.kernel.org/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
+      "iso_checksum": "ec49c297d484b9da0787e5944edc38f7c70f21c0f6a60178d8e9a8926d1949f4",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
